@@ -1,4 +1,5 @@
-﻿import React, { Component } from 'react';
+﻿import { Button } from 'bootstrap';
+import React, { Component } from 'react';
 
 export class MoviesList extends Component {
     static displayName = MoviesList.name;
@@ -38,9 +39,14 @@ export class MoviesList extends Component {
 
         return (
             <div>
-                <h1 id="tabelLabel" >Movies list</h1>
+                <h1 id="tabelLabel">Movies list</h1>
                 <p>This component demonstrates movies list from the server.</p>
                 {contents}
+
+                <form>
+                    <input name='uploadFile' id='uploadFile' type='file' onChange={this.check} display='none' />
+                    <input type="button" value="Upload"  className='button-normal' />
+                </form>
             </div>
         );
     }
