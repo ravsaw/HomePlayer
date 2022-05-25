@@ -1,6 +1,7 @@
 ﻿using HomePlayer_ReactJS.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Net.Http.Headers;
 
 namespace HomePlayer_ReactJS.Controllers
@@ -9,10 +10,6 @@ namespace HomePlayer_ReactJS.Controllers
     [Route("[controller]")]
     public class MoviesListController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
 
         private readonly ILogger<MoviesListController> _logger;
 
@@ -24,12 +21,27 @@ namespace HomePlayer_ReactJS.Controllers
         [HttpGet]
         public IEnumerable<Movie> Get()
         {
-            Console.WriteLine(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos).ToString());
-            return Enumerable.Range(1, 5).Select(index => new Movie
+            return GetMoviesFromJson();
+        }
+
+        private static IEnumerable<Movie> GetMoviesFromJson()
+        {
+            var pathToJson = Path.Combine(Directory.GetCurrentDirectory(), "Model", "MoviesDB.json");
+            using (StreamReader r = new StreamReader(pathToJson))
             {
-                Name = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+                string json = r.ReadToEnd();
+                var movies = JsonConvert.DeserializeObject<IEnumerable<Movie>>(json);
+                return movies ??= Enumerable.Empty<Movie>();
+            }
+        }
+
+        private static void SaveMoviesToJson(IEnumerable<Movie> movies)
+        {
+            var pathToJson = Path.Combine(Directory.GetCurrentDirectory(), "Model", "MoviesDB.json");
+            using (StreamWriter sw = new StreamWriter(pathToJson, false))
+            {
+                sw.WriteLine(JsonConvert.SerializeObject(movies));
+            }
         }
 
         [HttpPost, DisableRequestSizeLimit]
@@ -39,18 +51,19 @@ namespace HomePlayer_ReactJS.Controllers
             {
                 var formCollection = await Request.ReadFormAsync();
                 var file = formCollection.Files.First();
-                var folderName = Path.Combine("Resources", "Movies");
-                var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
+                var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos),"HomePlayer");
                 if (file.Length > 0)
                 {
                     var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
-                    var fullPath = Path.Combine(pathToSave, fileName);
-                    var dbPath = Path.Combine(folderName, fileName);
+                    var fullPath = Path.Combine(path, fileName);
+                    var movie = new Movie() { Name = fileName, Path = fullPath };
+                    var movies = GetMoviesFromJson().Append(movie);
+                    SaveMoviesToJson(movies);
                     using (var stream = new FileStream(fullPath, FileMode.Create))
                     {
                         file.CopyTo(stream);
                     }
-                    return Ok(new { dbPath });
+                    return Ok();
                 }
                 else
                 {
