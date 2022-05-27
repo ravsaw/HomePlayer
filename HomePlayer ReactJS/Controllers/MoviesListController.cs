@@ -21,49 +21,36 @@ namespace HomePlayer_ReactJS.Controllers
         [HttpGet]
         public IEnumerable<Movie> Get()
         {
-            return GetMoviesFromJson();
-        }
-
-        private static IEnumerable<Movie> GetMoviesFromJson()
-        {
-            var pathToJson = Path.Combine(Directory.GetCurrentDirectory(), "Model", "MoviesDB.json");
-            using (StreamReader r = new StreamReader(pathToJson))
+            var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos), "HomePlayer");
+            var movies = new List<Movie>();
+            var files = Directory.GetFiles(path);
+            foreach (var fullpath in files)
             {
-                string json = r.ReadToEnd();
-                var movies = JsonConvert.DeserializeObject<IEnumerable<Movie>>(json);
-                return movies ??= Enumerable.Empty<Movie>();
+                var file = Path.GetFileName(fullpath);
+                var movie = new Movie(title: file);
+                movies.Add(movie);
             }
-        }
-
-        private static void SaveMoviesToJson(IEnumerable<Movie> movies)
-        {
-            var pathToJson = Path.Combine(Directory.GetCurrentDirectory(), "Model", "MoviesDB.json");
-            using (StreamWriter sw = new StreamWriter(pathToJson, false))
-            {
-                sw.WriteLine(JsonConvert.SerializeObject(movies));
-            }
+            return movies;
         }
 
         [HttpPost, DisableRequestSizeLimit]
-        public async Task<IActionResult> UploadMovie()
+        public async Task<IActionResult> Post()
         {
             try
             {
                 var formCollection = await Request.ReadFormAsync();
                 var file = formCollection.Files.First();
                 var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos),"HomePlayer");
+                Directory.CreateDirectory(path);
                 if (file.Length > 0)
                 {
-                    var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+                    var fileName = formCollection["title"].FirstOrDefault(Guid.NewGuid().ToString("n").Substring(0, 8)) + ".mp4"; //ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
                     var fullPath = Path.Combine(path, fileName);
-                    var movie = new Movie() { Name = fileName, Path = fullPath };
-                    var movies = GetMoviesFromJson().Append(movie);
-                    SaveMoviesToJson(movies);
                     using (var stream = new FileStream(fullPath, FileMode.Create))
                     {
                         file.CopyTo(stream);
                     }
-                    return Ok();
+                    return Redirect("/movies-list");
                 }
                 else
                 {

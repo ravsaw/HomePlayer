@@ -2,7 +2,10 @@
 {
     public class Movie
     {
-        public string Name { get; set; }
-        public string Path { get; set; }
+        public string Title { get; set; }
+        public Movie(string title)
+        {
+            Title = title;
+        }
     }
 }

@@ -23,8 +23,8 @@ export class MoviesList extends Component {
                 </thead>
                 <tbody>
                     {mList.map(m =>
-                        <tr key={m.name}>
-                            <td>{m.name}</td>
+                        <tr key={m.title}>
+                            <td>{m.title}</td>
                         </tr>
                     )}
                 </tbody>
@@ -42,11 +42,6 @@ export class MoviesList extends Component {
                 <h1 id="tabelLabel">Movies list</h1>
                 <p>This component demonstrates movies list from the server.</p>
                 {contents}
-
-                <form>
-                    <input name='uploadFile' id='uploadFile' type='file' onChange={this.check} display='none' />
-                    <input type="button" value="Upload"  className='button-normal' />
-                </form>
             </div>
         );
     }
