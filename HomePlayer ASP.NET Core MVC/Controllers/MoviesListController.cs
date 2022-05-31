@@ -1,4 +1,5 @@
-﻿using HomePlayer_ReactJS.Model;
+﻿/*
+using HomePlayer_ReactJS.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -66,3 +67,4 @@ namespace HomePlayer_ReactJS.Controllers
 
 
 }
+*/

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rsawc\\source\\repos\\ravsaw\\HomePlayer\\HomePlayer ASP.NET Core MVC\\HomePlayer ASP.NET Core MVC.csproj": {}
+    "C:\\Users\\it\\Documents\\HomePlayer\\HomePlayer ASP.NET Core MVC\\HomePlayer ASP.NET Core MVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rsawc\\source\\repos\\ravsaw\\HomePlayer\\HomePlayer ASP.NET Core MVC\\HomePlayer ASP.NET Core MVC.csproj": {
+    "C:\\Users\\it\\Documents\\HomePlayer\\HomePlayer ASP.NET Core MVC\\HomePlayer ASP.NET Core MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rsawc\\source\\repos\\ravsaw\\HomePlayer\\HomePlayer ASP.NET Core MVC\\HomePlayer ASP.NET Core MVC.csproj",
+        "projectUniqueName": "C:\\Users\\it\\Documents\\HomePlayer\\HomePlayer ASP.NET Core MVC\\HomePlayer ASP.NET Core MVC.csproj",
         "projectName": "HomePlayer ASP.NET Core MVC",
-        "projectPath": "C:\\Users\\rsawc\\source\\repos\\ravsaw\\HomePlayer\\HomePlayer ASP.NET Core MVC\\HomePlayer ASP.NET Core MVC.csproj",
-        "packagesPath": "C:\\Users\\rsawc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rsawc\\source\\repos\\ravsaw\\HomePlayer\\HomePlayer ASP.NET Core MVC\\obj\\",
+        "projectPath": "C:\\Users\\it\\Documents\\HomePlayer\\HomePlayer ASP.NET Core MVC\\HomePlayer ASP.NET Core MVC.csproj",
+        "packagesPath": "C:\\Users\\it\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\it\\Documents\\HomePlayer\\HomePlayer ASP.NET Core MVC\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\rsawc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\it\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,7 +44,23 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Analyzers": {
               "target": "Package",
               "version": "[6.0.5, )"
             },
@@ -50,13 +70,29 @@
               "target": "Package",
               "version": "[6.0.5, )"
             },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite": {
               "target": "Package",
               "version": "[6.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.5, )"
             },
