@@ -1,0 +1,26 @@
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\bin\Debug\net6.0\appsettings.json
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\bin\Debug\net6.0\HomePlater ASP.NET Core.staticwebassets.runtime.json
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\bin\Debug\net6.0\HomePlater ASP.NET Core.exe
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\bin\Debug\net6.0\HomePlater ASP.NET Core.deps.json
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\bin\Debug\net6.0\HomePlater ASP.NET Core.runtimeconfig.json
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\bin\Debug\net6.0\HomePlater ASP.NET Core.dll
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\bin\Debug\net6.0\HomePlater ASP.NET Core.pdb
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\obj\Debug\net6.0\HomePlater ASP.NET Core.csproj.AssemblyReference.cache
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\obj\Debug\net6.0\HomePlater ASP.NET Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\obj\Debug\net6.0\HomePlater ASP.NET Core.AssemblyInfoInputs.cache
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\obj\Debug\net6.0\HomePlater ASP.NET Core.AssemblyInfo.cs
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\obj\Debug\net6.0\HomePlater ASP.NET Core.csproj.CoreCompileInputs.cache
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\obj\Debug\net6.0\HomePlater ASP.NET Core.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\obj\Debug\net6.0\HomePlater ASP.NET Core.RazorAssemblyInfo.cache
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\obj\Debug\net6.0\HomePlater ASP.NET Core.RazorAssemblyInfo.cs
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\obj\Debug\net6.0\scopedcss\bundle\HomePlater ASP.NET Core.styles.css
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\obj\Debug\net6.0\scopedcss\projectbundle\HomePlater ASP.NET Core.bundle.scp.css
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\obj\Debug\net6.0\HomePlater ASP.NET Core.dll
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\obj\Debug\net6.0\refint\HomePlater ASP.NET Core.dll
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\obj\Debug\net6.0\HomePlater ASP.NET Core.pdb
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\obj\Debug\net6.0\HomePlater ASP.NET Core.genruntimeconfig.cache
+C:\Users\rsawc\source\repos\ravsaw\HomePlayer\HomePlater ASP.NET Core\obj\Debug\net6.0\ref\HomePlater ASP.NET Core.dll

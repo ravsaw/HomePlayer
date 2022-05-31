@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomePlayer ReactJS", "HomePlayer ReactJS\HomePlayer ReactJS.csproj", "{74A144F0-6DCD-4BF8-968A-CD1046E9ADCB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomePlayer ASP.NET Core MVC", "HomePlayer ASP.NET Core MVC\HomePlayer ASP.NET Core MVC.csproj", "{FCEDF81F-0379-4B44-B7A3-4357A368358A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{74A144F0-6DCD-4BF8-968A-CD1046E9ADCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{74A144F0-6DCD-4BF8-968A-CD1046E9ADCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{74A144F0-6DCD-4BF8-968A-CD1046E9ADCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{74A144F0-6DCD-4BF8-968A-CD1046E9ADCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCEDF81F-0379-4B44-B7A3-4357A368358A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCEDF81F-0379-4B44-B7A3-4357A368358A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCEDF81F-0379-4B44-B7A3-4357A368358A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCEDF81F-0379-4B44-B7A3-4357A368358A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
